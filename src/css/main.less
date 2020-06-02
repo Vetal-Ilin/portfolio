@@ -1,0 +1,311 @@
+@import "normalize";
+@import "page";
+@import "font";
+@import "variables";
+@import "mixin";
+@import "media";
+
+
+.navigation {
+
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    right: 30px;
+    top: 50%;
+    height: 45px;
+    z-index: 1000;
+    transform: translateY(-50%);
+  
+
+
+    &__header-major,
+    &__main-skills,
+    &__main-education {
+
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 1px solid white;
+        background-color: hidden;
+    }
+}
+
+/*  header-major ================================================================= */
+#header-major {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100vw;
+    min-width: 320px;
+    max-height: 1400px;
+    height: 100vh;
+    background-color: @bc_header; /* variables п.5 */
+    background-image: @bc_img_2000x1333; /* variables п.4 */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+
+    .wrapper-menu-icon {
+
+        .burger-icon(); /* mixin п.1 */
+    }
+
+    .wrapper-menu-item-navigation {
+
+        .burger-menu(); /* mixin п.2 */
+    }
+
+    .header-major__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 20px 20px 20px 20px;
+        margin: 0;
+      
+
+        &__figure {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            height: 500px;
+            width: 40%;
+            background-color:hidden;
+            margin: 0;
+            padding: 0 10px 0 10px;
+
+            &__img {
+                width: 320px;
+                height: 313px;
+            }
+
+            &__figcaption {
+                font-family: @ff_2; /* variables п.3 */
+                text-align: start;
+                color: @text-color-p2; /* variables п.2 */
+                font-weight: bold;
+                width: 40%;
+                margin: 0 0 0 -2px;
+                line-height: 55px;
+
+            }
+        }
+        
+        &__wrapper-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            width: 50%;
+            color: @text-color-p2; /* variables п.2 */
+            font-weight: bold;
+            
+    
+            h2 {
+                font-family: @ff_2; /* variables п.3 */            
+            }
+
+            &__mobile-version {
+
+                display: none;
+            }
+
+            p {
+
+               
+                text-align: right;
+                margin: 30px 0 0 0;
+            }
+
+            &__contacts {
+
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin: 30px 0 0 0;
+                
+
+                &__icon {
+                    width: 35px;
+                    height: 38px;
+                    margin-right: 5px;
+                }
+
+                p {
+                    
+                    
+                    margin: 0;
+                }
+            }
+        }
+    }
+    
+    .header-major__wrapper-arrow {
+        
+        .arrow-button(); /* variables п.3 */
+
+    }
+}
+
+/* main-skills ========================================================================================== */
+#main-skills {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-width: 320px;
+    max-height: 1400px;
+    height: 100vh;
+    background:  @bc_main; /* variables п.5 */
+    
+    .main-skills__content {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 95%;
+        height: 95%;
+        border-left: 2px solid @border-main-section; /* variables п.6 */
+        border-right: 2px solid @border-main-section; /* variables п.6 */
+
+
+        &__up-arrow {
+
+            .up-arrow(); /* mixin п.4 */
+        }
+
+        h1 {
+
+        
+            font-family: @ff_2;
+            color: @text-color-p2;
+            margin-bottom: 30px;        
+        }
+
+        &__cards {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+           
+            
+            &__item {
+
+                display: block;
+                width: 220px;
+                height: 200px;
+                position: relative;
+                background-color:  @bc-main-skills-elementary-cards; /* variables п.6 */
+                transition: 
+                background-color 0.3s linear,
+                transform 0.3s linear,
+                border 0.3s linear;
+                padding: 0;
+                margin: 10px 10px;
+
+
+                &:hover {
+
+                    
+                    transform: translate(-20px, -20px);
+                    background-color:  @bc-main-skills-cards-hover; /* variables п.6 */
+                    border: 1px solid @border-main-skills-cards-hover; /* variables п.6 */
+                }
+
+                &__content {
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    cursor: pointer;
+                    border: 1px solid @border-main-skills-elementary-cards; /* variables п.6 */
+                    transition: all 0.3s linear;
+
+                    ul {
+
+                        opacity: 0;
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        font-size: 14px;
+                        font-family: @ff_2;
+                        font-weight: bold;
+                        transition: all 0.3s linear;
+                        width: 98%;
+
+                        li {
+
+                            margin: 5px 0 5px -20px;
+                            color: rgba(11, 14, 24, 1.0); 
+                        }
+                    }
+
+                    img {
+
+                        width: 60px;
+                        height: 60px;          
+                    }
+    
+                    h2 {
+    
+                        color: @text-color-p2;
+                        margin-top: 20px;
+                        font-size: 23px; 
+                    }
+                }
+
+                &:hover  .main-skills__content__cards__item__content {
+
+                    border: 1px dashed  @border-main-skills-elementary-cards-hover;
+                    transform: translate(20px, 20px);
+                    
+                    
+                    ul {
+
+                        opacity: 1.0;
+                        position: absolute;
+                        top: -20px;
+                        left: -20px;
+                    }
+
+                    img {
+
+                        opacity: 0;
+                    }
+    
+                    h2 {
+    
+                        opacity: 0;
+                        
+                    }
+                }
+            }
+        } 
+
+        &__down-arrow {
+
+            .down-arrow();
+        }
+    } 
+}
+
+/* main-education ========================================================================================== */

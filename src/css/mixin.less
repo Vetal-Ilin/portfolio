@@ -1,0 +1,412 @@
+@import "variables";
+
+/* 1. кнопка всплывающего меню навигации burger (.wrapper-menu-icon) */
+
+.burger-icon() {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    border: 1px solid @border-icon-burger; /* variables п.6 */
+    cursor: pointer;
+    position: fixed;
+    top: 3%;
+    right: 3%;
+    transition: background-color 0.3s linear,
+    border-radius 0.3s linear;
+    z-index: 1000;
+    
+    &:hover {
+    
+        background-color:  @bc-icon-burger-hover; /* variables п.6 */
+    }
+    
+    &:hover .wrapper-menu-icon__burger span,
+    &:hover .wrapper-menu-icon__burger::after,
+    &:hover .wrapper-menu-icon__burger::before {
+    
+        background-color: @bc-icon-line-hover; /* variables п.6 */
+    }
+    
+    &.active {
+    
+        background-color: @bc-icon-burger-active; /* variables п.6 */
+    }
+    
+    &__burger {
+    
+        display: block;
+        position: relative;
+        height: 30px;
+        width: 40px;
+            
+        
+        &__span {
+                
+            position: absolute;
+            background-color: @bc-icon-line; /* variables п.6 */
+            width: 100%;
+            height: 3px;
+            left: 0;
+            top: 13px;
+            transition: all 0.3s ease 0s;
+            
+            &:hover {
+    
+                background-color: @bc-icon-line-hover; /* variables п.6 */
+            }
+    
+            &.active {
+                transform: scale(0);
+                background-color: @bc-icon-line-active; /* variables п.6 */
+            }
+        }
+    
+        &::before,
+        &::after {
+            
+            content: "";
+            background-color:  @bc-icon-line; /* variables п.6 */
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            left: 0;
+            transition: all 0.3s ease 0s;
+        }
+    
+        &::before {
+            
+            top: 0;
+        }
+    
+        &::after {
+            
+            bottom: 0;
+        }
+    
+        &.active::before {
+                
+            transform: rotate(45deg);
+            top: 13px;
+            background-color: @bc-icon-line-active; /* variables п.6 */
+        }
+    
+    
+        &.active::after {
+            
+            transform: rotate(-45deg);
+            bottom: 13px;
+            background-color: @bc-icon-line-active; /* variables п.6 */
+        }
+    }
+}
+
+
+.burger-icon() {
+    @media (max-width: 1199px) {
+
+        height: 70px;
+        width: 70px;
+    }
+
+    @media (max-width: 991px) {
+
+        height: 60px;
+        width: 60px;
+    
+        &__burger {
+
+            height: 23px;
+            width: 33px;
+
+            &__span {
+
+                top: 10px; 
+            }
+            &.active::before {
+    
+                top: 10px;
+            }
+    
+            &.active::after {
+            
+                bottom: 10px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+
+        height: 50px;
+        width: 50px;
+
+        &__burger {
+
+            height: 13px;
+            width: 16px;
+
+            &__span {
+
+                top: 5px; 
+            }
+        
+            &.active::before {
+    
+                top: 5px;
+            }
+
+            &.active::after {
+            
+                bottom: 5px;
+            }
+        }
+    }
+}
+
+/* 2. всплывающее меню навигации burger (.wrapper-menu-item-navigation) */
+.burger-menu() {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100vh;
+    background-color: @bc-burger-menu; /* variables п.5 */
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    transition: right 0.3s linear;
+
+    &.active {
+
+        right: 0;
+    }
+
+    a {
+
+        text-decoration: none;
+        font-family: @ff_2; /* variables п.3 */
+        font-size: 32px;
+        margin-top: 30px;
+        color: @text-color-p2; /* variables п.2 */
+        transition: color 0.3s linear;
+
+        &:hover {
+
+            color: @text-color-p3; /* variables п.2 */
+        }
+    }
+}
+
+.burger-menu() {
+    @media (max-width: 991px) {
+
+        a {
+            font-size: 27px;
+        }
+    }
+
+    @media (max-width: 767px) {
+
+        width: 50%;
+            
+        a {
+
+            font-size: 23px;
+        } 
+    }
+}
+
+
+/* 3. кнопка прокрутки страници вниз  (.header-major__wrapper-arrow )*/
+
+.arrow-button() {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80px;
+    height: 80px;
+    border: 1px solid @border-icon-arrow; /* variables п.6 */
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        background-color: @bc_button-arrow;  /* variables п.6 */
+        cursor: pointer;
+        transition: background-color 0.3s linear;
+
+        &:hover {
+           
+            background-color: @bc_button-arrow-hover; /* variables п.6 */
+        }
+
+        &__icon {
+            width: 30%;
+            height: 90%;
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.arrow-button() { 
+
+    @media (max-width: 1199px) {
+
+        width: 70px;
+        height: 70px;
+
+        &__button {
+
+            width: 70px;
+            height: 70px;
+        }
+    }
+
+    @media (max-width: 991px) {
+
+        width: 60px;
+        height: 60px;
+
+        &__button {
+
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    @media (max-width: 767px) {
+
+        width: 50px;
+        height: 50px;
+    
+        &__button {
+    
+            width: 50px;
+            height: 50px;
+        }
+    }    
+    
+    @media (max-width: 575px) {
+
+        display: none;
+    }
+}
+
+
+
+
+/*  4. кнопка прокрутки страницы вверх или вниз сбоку экрана  (.main-skills__content__up-arrow)*/
+
+.up-arrow() {
+
+    display: flex;         
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    width: auto;
+    height: auto;
+    transform: translateY(-50%);
+    text-decoration: none; 
+            
+            
+
+    &__button {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15px;
+        height: 60px;
+        border-top: 1px solid @border-top-bottom-side-arrow; /* variables п.6 */
+        border-bottom: 1px solid @border-top-bottom-side-arrow; /* variables п.6 */
+        background-color: @bc_main;
+        transition: all 0.3s linear;
+                
+
+        &__icon {
+
+            width: 90%;
+            height: 90%;
+            margin: 0 auto;
+            transform: rotate(-90deg);
+        }
+
+        &:hover {
+
+            height: 80px;
+            border-top: 1px solid @border-top-bottom-side-arrow-hover;
+            border-bottom: 1px solid @border-top-bottom-side-arrow-hover;
+        }
+    }
+}
+
+.up-arrow() {
+
+    @media (max-width: 576px) {
+
+        display: none;
+    }
+}
+
+.down-arrow() {
+
+    display: flex;         
+    position: absolute;
+    top: 50%;
+    right: -8px;
+    width: auto;
+    height: auto;
+    transform: translateY(-50%);
+    text-decoration: none; 
+            
+            
+
+    &__button {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15px;
+        height: 60px;
+        border-top: 1px solid @border-top-bottom-side-arrow; /* variables п.6 */
+        border-bottom: 1px solid @border-top-bottom-side-arrow; /* variables п.6 */
+        background-color: @bc_main;
+        transition: all 0.3s linear;
+                
+
+        &__icon {
+
+            width: 90%;
+            height: 90%;
+            margin: 0 auto;
+            transform: rotate(90deg);
+        }
+
+        &:hover {
+
+            height: 80px;
+            border-top: 1px solid @border-top-bottom-side-arrow-hover;
+            border-bottom: 1px solid @border-top-bottom-side-arrow-hover;
+        }
+    }
+}
+
+.down-arrow() {
+
+    @media (max-width: 576px) {
+
+        display: none;
+    }
+}

@@ -1,0 +1,411 @@
+@import "variables";
+@import "main";
+
+
+/* 1. media запросы для шрифтов находятся в файле font.less 
+   2. media запросы для эле  ментов (.wrapper-menu-icon; .wrapper-menu-item-navigation; .header-major__wrapper-arrow) 
+    находятся в файле vatiables.less */
+
+#header-major {
+
+    @media (max-width: 1199px) {
+
+        background-image: @bc_img_1500x999;   /* variables п.4 */      
+        
+
+        .header-major__content {
+
+           
+            &__figure {
+
+                height: 480px;
+               
+
+                &__img {
+
+                    width: 310px;
+                    height: 303px;
+                }
+
+                &__figcaption {
+
+                    margin: -1px 0 0 -2px;
+                }
+            }
+
+            &__wrapper-text {
+
+                
+                p {
+
+                    
+                    margin: 25px 0 0 0;
+                }
+
+                &__contacts {
+
+                    margin: 25px 0 0 0;
+
+                    &__icon {
+
+                        width: 30px;
+                        height: 33px;
+                    }
+
+                    p {
+
+                        
+                        margin: 0; 
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+
+        background-image: @bc_img_1200x666; /* variables п.4 */
+
+        .header-major__content {
+
+           
+
+            &__figure {
+
+                height: 410px;
+              
+
+                &__img {
+
+                    width: 250px;
+                    height: 250px;
+                }
+
+                &__figcaption {
+
+                    margin: -1px 0 0 -1px;
+                    line-height: 43px;
+                   
+                }
+            }
+
+
+
+            &__wrapper-text {
+
+            
+
+
+                p {
+
+                    
+                    margin: 15px 0 0 0;
+                }
+
+                &__contacts {
+
+                    margin: 15px 0 0 0;
+
+                    &__icon {
+
+                        width: 20px;
+                        height: 23px;
+                    }
+
+                    p {
+
+                      
+                        margin: 0; 
+                    }
+                }
+            }
+        }
+    }
+
+    
+    @media (max-width: 767px) {
+
+        background-image: @bc_img_900x599;
+            
+            .header-major__content {
+
+                flex-direction: column;
+                justify-content: center;
+                align-items: space-around;
+
+                &__figure {
+                    
+                    height: 100px;
+                    width: 100px;
+                    border-radius: 50%;
+                    padding: 0;
+                    order: 1;
+                    
+                   
+                    &__img {
+
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                    }
+
+                    &__figcaption {
+
+                        display: none;
+                    }
+                }
+
+                &__wrapper-text {
+
+                    width: 100%;
+                    align-items: center;
+                    order: 2;
+                    padding: 0 5px 0 5px;
+                  
+                    h2 {
+
+                        margin: 15px 0 15px 0;
+                    }
+
+                    &__mobile-version {
+
+                        display: block;
+                    }
+
+                    & p {
+
+                        text-align: center;
+                        margin-top: 5px;
+                    }
+
+                    &__contacts {
+                    
+                        align-items: center;
+                        position: relative;
+
+                    &__icon {
+
+                        width: 15px;
+                        height: 18px;
+                    }
+
+                    p {
+
+                        font-size: @fz-p2 - 7;
+                        margin: 0; 
+                    }
+                }
+            }
+        }
+        
+    }
+
+    @media (max-width: 575px) {
+
+        background-image: @bc_img_600x399;
+        
+        .header-major__content {
+
+            flex-direction: column;
+            justify-content: center;
+            align-items: space-around;
+
+            &__wrapper-text {
+
+                width: 100%;
+                align-items: center;
+                order: 2;
+                padding: 0 5px 0 5px;
+              
+                h2 {
+
+                    margin: 10px 0 10px 0;
+                   
+                }
+
+                & p {
+
+                    
+                    text-align: center;
+                    margin-top: 5px;
+                }
+
+                &__contacts {
+                    align-items: center;
+                    
+                    position: relative;
+
+                    &__icon {
+
+                        width: 15px;
+                        height: 18px;
+                    }
+
+                    p {
+
+                     
+                        margin: 0; 
+                    }
+                }
+            }
+        }
+    }
+} /* end #header-major */
+
+#main-skills {
+
+    @media (max-width: 1199px) {
+
+        .main-skills__content {
+
+            &__cards {
+
+                &__item  {
+
+                    width: 200px;
+                    height: 180px;
+
+                    &__content {
+
+                        img {
+
+                            width: 50px;
+                            height: 50px;          
+                        }
+                    }
+                }
+            }
+        }  
+    }
+
+    @media (max-width: 991px) {
+
+
+
+        .main-skills__content {
+
+            &__cards {
+
+                &__item  {
+
+                    width: 180px;
+                    height: 160px;
+
+                    &__content {
+
+                        img {
+
+                            width: 40px;
+                            height: 40px;          
+                        }
+                    }
+                }
+            }
+        }  
+
+    }
+
+    @media (max-width: 767px) {
+
+
+        .main-skills__content {
+
+            &__cards {
+
+                &__item  {
+
+                    width: 140px;
+                    height: 110px;
+
+                    &__content {
+
+                        img {
+
+                            width: 30px;
+                            height: 30px;          
+                        }
+                    }
+                }
+            }
+        } 
+    }
+
+    @media (max-width: 575px) {
+
+        height: auto;
+        .main-skills__content {
+
+           border: none;
+
+           &::after {
+               display: none;
+           }
+
+           &::before {
+                display: none;
+           }
+
+            h1 {
+
+                text-align: center;
+                margin: 10px 0 10px 0;
+                
+            }
+
+            &__cards {
+
+               
+                &__item  {
+
+                    width: 95%;
+                    height: 90px;
+                    margin: 5px 5px;
+
+                    &__hover {
+
+                        transform: none;
+                        background-color:  none;
+                        border: none;
+                    }
+
+                    &__content {
+
+                        flex-direction: row;
+                        justify-content: flex-start;
+
+                        ul {
+
+                            opacity: 1;
+                            top: 0;
+                            left: auto;
+                            right: 0;
+                            width: 50%;
+                            margin: 0;
+                            color: white;
+
+                            li {
+                               font-weight: normal;
+                               font-size: 10px;
+                                color: white;
+                            }
+                        }
+
+                        img {
+
+                            width: 35px;
+                            height: 35px;
+                            margin: 0 5px;
+                                     
+                        }
+
+                        h2 {
+                            
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}
+

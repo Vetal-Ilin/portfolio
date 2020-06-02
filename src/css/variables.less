@@ -1,0 +1,101 @@
+/*  1. РАЗМЕРЫ ШРИФТОВ ================================== */
+
+    @fz_h1: 70px; /* размер шрифта заголовка h1; */
+    @fz_h2: 41px; /* размер шрифта заголовка h2 */
+    @fz-p1: 18px; /* размер шрифта (body) */
+    @fz-p2: 23px; /* размер шрифта текста под аватаркой станица (#header-major, .header-major__content ) */
+@p_cards: 18px; 
+
+/* 2. ЦВЕТ ШРИФТОВ ======================================== */
+
+    /* цвет для темного текста */
+    @text-color-p1: rgba(22, 20, 24, 1.0); /* black */
+    /* цвет для светлого текста */
+    @text-color-p2: rgba(255, 255, 255, 1.0); /* white */
+    /* цвет текста при  наведении (.wrapper-menu-item-navigation) */
+    @text-color-p3: rgba(42, 122, 211, 1.0); /* blue */
+
+/* 3. ТИП ШРИФТОВ ======================================*/
+    
+    /* шрифт для основного контента */
+    @ff_1: 'Comfortaa', cursive;
+
+    /* второстепенный шрифт (.header-major__content__figure__figcaption) */
+    @ff_2: 'Russo One', sans-serif;
+
+/* 4. ПЕРЕМЕННЫЕ С ИЗОБРАЖЕНИЯМИ ДЛЯ ФОНА =================*/
+    /* изображения для фона header-major */
+    @bc_img_2000x1333: url('../../build/img/header_background-image2000x1333.png'); /* изображения для разрешения по ширине больше 1200px */
+    @bc_img_1500x999: url('../../build/img/header_background-image1500x999.png'); /* изображения для разрешения по ширине от 922 до  1199px*/
+    @bc_img_1200x666: url('../../build/img/header_background-image1200x666.png'); /* изображения для разрешения по ширине от 768 до 991*/
+    @bc_img_900x599: url('../../build/img/header_background-image900x599.png'); /* изображения для разрешения по ширине от 576 до 767*/
+    @bc_img_600x399: url('../../build/img/header_background-image600x399.png'); /* изображения для разрешения по ширине до 575 */
+    
+   
+
+
+/* 5. ЦВЕТ ФОНА============================================ */
+    /* цвет при отсутствуии фонового изображения header-major */
+    @bc_header: rgba(22, 20, 24, 1.0); /* black */ 
+    /* цвет фона всплывающего меню burger (.wrapper-menu-item-navigation) */
+    @bc-burger-menu: rgba(22, 20, 24, 0.9); /* black */ 
+
+    /* цвет фона main (.main-skills) */
+    @bc_main: rgba(11, 14, 24, 1.0); /* black */
+
+
+
+/* 6. ЦВЕТ ЭЛЕМЕНТОВ ====================================== */
+
+
+
+    /* HEADER-MAJOR =======*/
+
+        /* цвет для кнопки всплывающего меню burger (.wrapper-menu-icon) */
+            /* цвет рамки значка */
+            @border-icon-burger: rgba(255, 255, 255, 1.0); /* white */
+            /* цвет значка при наведении на него курсора мыши */ 
+            @bc-icon-burger-hover: rgba(255, 255, 255, 1.0); /* white */
+            /*  цвет при активном состоянии кнопки */
+            @bc-icon-burger-active: rgba(255, 255, 255, 1.0); /* white */
+            /* цвет трех линий значка в обычном состоянии */
+            @bc-icon-line: rgba(255, 255, 255, 1.0); /* white */
+            /* цвет трех линий значка при наведении на значек курсора */
+            @bc-icon-line-hover: rgba(22, 20, 24, 1.0); /* black */ 
+            /* цвет трех линий значка при активном состоянии */
+            @bc-icon-line-active: rgba(22, 20, 24, 1.0); /* black */ 
+
+        /* цвет для кнопки прокрутки сайта вниз кнопка в header(.header-major__wrapper-arrow) */
+            /* цвет рамки кнопки  */
+            @border-icon-arrow: rgba(255, 255, 255, 1.0); /* white */
+            /* цвет кнопки со стрелкой content header-major */
+            @bc_button-arrow: hidden; /* gray */
+            /* цвет кнопки со стрелкой  content header-major при наведении на нее :hover */
+            @bc_button-arrow-hover: rgba(255, 255, 255, 1.0);  /* white */
+  
+    /* MAIN-SKILLS =======*/
+
+        /* цвет рамки раздела  (.main-skills) */
+        @border-main-section: rgba(255, 255, 255, 0.5); /* white */
+
+        /* цвет кнопки со стрелкой прокрутки сайта вверх или вниз сбоку экрана на рамке (.main-skills__content__up-arrow) */
+            /* цвет верхней и нижней рамок border-top, border-bottom */
+            @border-top-bottom-side-arrow: rgba(255, 255, 255, 1.0); /* white */
+            /* цвет верхней и нижней рамок border-top, border-bottom при наведении курсора */
+            @border-top-bottom-side-arrow-hover: rgba(42, 122, 211, 1.0);
+            
+        /* цвет карточек (.main-skills__content__cards__item) */
+            /* основной цвет фона карточек */ 
+            @bc-main-skills-elementary-cards: hidden; 
+            /* основной цвет рамок border  карточек */
+            @border-main-skills-elementary-cards: rgba(255, 255, 255, 1.0); /* white */
+            /* основной цвет рамок border  карточек при наведении */
+            @border-main-skills-elementary-cards-hover:rgba(255, 255, 255, 1.0); /* white */
+
+            /* цвет всплывающего окна карточек при наведении */
+            @bc-main-skills-cards-hover: rgba(255, 255, 255, 1.0); /* white */
+            /* цвет рамки border  всплывающего окна карточек при наведении */
+            @border-main-skills-cards-hover: rgba(42, 122, 211, 1.0); /* blue */;
+
+
+
